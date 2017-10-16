@@ -1,0 +1,41 @@
+{
+    "parser": "babel-eslint",
+    "env": {
+        "browser": true
+    },
+    "ecmaFeatures": {
+        "jsx": true
+    },
+    "plugins": [
+        "react",
+        "react-native"
+    ],
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended"
+    ],
+    "rules": {
+        /*
+            0 - No warning or error
+            1 - Warning
+            2 - Error
+        */
+        
+        // React-Native Rules
+        "react-native/no-unused-styles": 2,
+        "react-native/split-platform-components": 2,
+        "react-native/no-inline-styles": 2,
+        "react-native/no-color-literals": 2,
+
+        // JS Rules
+        "camelcase": [ 2, { "properties": "always" } ], // Enforce camelcase naming convention
+        "no-alert": 2, // Disallow the use of alert, confirm, and prompt
+        "no-var": 2, // Require let or const instead of var
+        "quotes": [ 2, "single", "avoid-escape" ], // Enforce the consistent use of either backticks, double, or single quotes
+        "semi": [ 2, "always" ], // Require or disallow semicolons instead of ASI
+        "keyword-spacing": [2, {"before": true, "after": true}], // Enforce consistent spacing before and after keywords
+        "spaced-comment": [ 2, "always" ], // Enforce consistent spacing after the // or /* in a comment
+        "no-console": 1, // Disallow the use of console
+        "no-extra-semi": 2 // Disallow unnecessary semicolons
+    }
+}
